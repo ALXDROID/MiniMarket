@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>MiniMarket App PRO</title>
+<title>PRO</title>
 
 <link rel="manifest" href="manifest.json">
 
@@ -105,7 +105,11 @@ if ("serviceWorker" in navigator) {
   <div class="banner-title">🛒 MiniMarket</div>
   <div>Compra rápido y fácil</div>
 </div>
-
+<!-- BUSCADOR -->
+<div class="container mb-3 px-3">
+  <input type="text" id="buscar" class="form-control form-control-lg"
+         placeholder="🔍 Buscar productos..." oninput="filtrarProductos()">
+</div>
 <!-- PRODUCTOS -->
 <div class="container">
   <div class="row g-4" id="productos"></div>

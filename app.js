@@ -70,8 +70,33 @@ function mostrarCarrito(){
     `;
   });
 }
+function filtrarProductos(texto) {
+  const div = document.getElementById("productos");
+  div.innerHTML = "";
 
-window.onload = () => {
+  productos
+    .filter(p => p.nombre.toLowerCase().includes(texto.toLowerCase()))
+    .forEach(p => {
+      div.innerHTML += `
+      <div class="col-6">
+        <div class="product-card">
+          <img src="${p.img}">
+          <h6 class="mt-2 fw-bold">${p.nombre}</h6>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price-tag">$${p.precio}</span>
+            <button class="btn-add" onclick="agregar(${p.id})">+</button>
+          </div>
+        </div>
+      </div>`;
+    });
+}
+window.addEventListener("DOMContentLoaded", () => {
   mostrarProductos();
-  mostrarCarrito();
-};
+
+  const buscador = document.getElementById("buscar");
+  if (buscador) {
+    buscador.addEventListener("input", e => {
+      filtrarProductos(e.target.value);
+    });
+  }
+});
