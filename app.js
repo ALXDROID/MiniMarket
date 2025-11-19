@@ -1,7 +1,7 @@
 const productos = [
-  {id:1, nombre:"Coca Cola 1.5L", precio:1900, img:"coca.jpg"},
-  {id:2, nombre:"Pan Molde", precio:1300, img:"pan.jpg"},
-  {id:3, nombre:"Arroz 1kg", precio:1200, img:"arroz.jpg"},
+  {id:1, nombre:"Coca Cola 1.5L", precio:1900, img:"/coca.jpg"},
+  {id:2, nombre:"Pan Molde", precio:1300, img:"/pan.jpg"},
+  {id:3, nombre:"Arroz 1kg", precio:1200, img:"/arroz.jpg"},
 ];
 
 function mostrarProductos() {
