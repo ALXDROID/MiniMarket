@@ -1,7 +1,7 @@
 const productos = [
-  {id:1, nombre:"Coca Cola 1.5L", precio:1900, img:"../coca.jpg"},
-  {id:2, nombre:"Pan Molde", precio:1300, img:"../pan.jpg"},
-  {id:3, nombre:"Arroz 1kg", precio:1200, img:"../arroz.jpg"},
+  {id:1, nombre:"Coca Cola 1.5L", precio:1900, img:"coca.jpg"},
+  {id:2, nombre:"Pan Molde", precio:1300, img:"pan.jpg"},
+  {id:3, nombre:"Arroz 1kg", precio:1200, img:"arroz.jpg"},
 ];
 
 function mostrarProductos() {
@@ -59,7 +59,7 @@ function mostrarCarrito(){
       <div class="cart-card mb-2">
         <div class="d-flex justify-content-between">
           <div>
-            <strong>${p.nombre}</strong><br>
+      r      <strong>${p.nombre}</strong><br>
             Cantidad: ${item.cantidad}
           </div>
           <div class="text-success fw-bold">
@@ -92,7 +92,7 @@ function filtrarProductos(texto) {
 }
 window.addEventListener("DOMContentLoaded", () => {
   mostrarProductos();
-
+mostrarCarrito();
   const buscador = document.getElementById("buscar");
   if (buscador) {
     buscador.addEventListener("input", e => {
